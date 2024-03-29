@@ -24,7 +24,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 15px;
     min-height: 60px;
     background-color: #1b1a14;
 }
