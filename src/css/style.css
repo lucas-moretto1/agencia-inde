@@ -100,13 +100,13 @@ body{
     }
 
     .hero .escrita p{
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
         line-height: 50px;
     }
 
     .hero .imagem img{
-        width: 350px;
+        width: 320px;
     }
 }
 
@@ -452,7 +452,7 @@ body{
 
     .depoimentos .card .feedback{
         text-align: center;
-        font-size: 1.8rem;
+        font-size: 1.7rem;
         line-height: 30px;
     }
 
@@ -488,11 +488,12 @@ body{
 .contato .social .social-icon{
     display: flex;
     justify-content: center;
-    margin: 50px;
+    margin: 50px 10px;
+    gap: 15px;
 }
 
 .contato .social .social-icon li a{
-    margin: 0px 10px;
+    transition: .4s ease-in-out;
 }
 
 .contato .social .social-icon li a:hover{
@@ -513,7 +514,7 @@ body{
     bottom: 15px;
     right: 30px;
     padding: 8px;
-    transition: 0.3s ease-in;
+    transition: 0.3s ease-in-out;
 }
 
 .image-whats:hover{
@@ -522,10 +523,10 @@ body{
 
 .contato .inde {
     font-size: 1.8rem;
+    margin-bottom: 15px;
 }
 
 @media(max-width: 500px){
-
     .contato .logo-footer{
         margin: 30px 0;
         display: flex;
