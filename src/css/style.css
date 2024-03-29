@@ -1,0 +1,570 @@
+html {
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    grid-template-areas: "header header header header"
+                         "hero hero hero hero"
+                         "projetos projetos projetos projetos"
+                         "quemsomos quemsomos quemsomos quemsomos"
+                         "servicos servicos servicos servicos"
+                         "depoimentos depoimentos depoimentos depoimentos"
+                         "contato contato contato contato";
+    grid-template-columns: repeat(4 1fr);
+    font-size: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header{
+    grid-area: header;
+}
+
+.header .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    min-height: 60px;
+    background-color: #1b1a14;
+}
+
+.header-container img {
+    width: 110px;
+    height: 100%;
+}
+
+.hero {
+    grid-area: hero;
+    height: 83vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    position: relative;
+    background-color: #ac8362;
+}
+
+.hero .escrita p{
+    font-size: 55px;
+    color: #f0efea;
+    font-family: 'Playfair Display';
+    line-height: 55px;
+}
+
+.hero .escrita p strong {
+    color: #1b1a14;
+    font-style: italic;
+}
+
+.hero .escrita p b {
+    font-style: italic;
+}
+
+.hero .imagem img{
+    width: 400px;
+}   
+
+.hero:before {
+    content: url('../images/seta-baixo.png');
+    position: absolute;
+    bottom: 20px;
+    animation: moverseta 0.7s infinite alternate ease-in-out;
+}
+
+.hero:after {
+    content: url('../images/seta-baixo.png');
+    position: absolute;
+    bottom: 10px;
+    animation: moverseta 0.7s infinite alternate ease-in-out;
+}    
+
+@media(max-width:1020px){
+    .hero{
+        flex-direction: column;
+    }
+
+    .hero .escrita p{
+        font-size: 35px;
+        text-align: center;
+        line-height: 40px;
+    }
+
+    .hero .imagem img{
+        width: 300px;
+    }
+}
+
+@media(max-width:520px){
+    .hero{
+       height: 100vh;
+    }
+
+    .hero .escrita p{
+        font-size: 5rem;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    .hero .imagem img{
+        width: 350px;
+    }
+}
+
+@-webkit-keyframes moverseta{
+
+    0% {
+        -webkit-transform: translateY(0); opacity: 0.4;
+    }
+
+    100% {
+        -webkit-transform: translateY(0.6rem); opacity: 0.;
+        -webkit-filter: invert(0.9);
+    }
+}
+
+.quemsomos{
+    grid-area: quemsomos;
+    background-color: #1b1a14;
+    height: 703px;
+}
+
+.quemsomos .conteudo {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
+    font-family: 'Playfair Display';
+    font-style: italic;
+    font-size: 5rem;
+    color: #ac8362;
+}
+
+.quemsomos .conteudo .inde .texto, .quemsomos .conteudo .iva .texto{
+    margin: 20px 0px;
+    text-align: justify;
+    font-weight: 300;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    width: 500px;
+}
+
+.quemsomos .conteudo .inde .texto{
+    font-weight: 400;
+}
+
+.quemsomos .conteudo .iva {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.quemsomos .conteudo .iva .texto{
+    color: #ac8362;
+}
+
+.quemsomos .conteudo .image-profile img{
+    width: 700px;
+    height: 100%;
+}
+
+@media(max-width: 1150px){
+    .quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
+        font-size: 3rem;
+    }
+
+    .quemsomos .conteudo .inde .texto, .quemsomos .conteudo .iva .texto{
+        font-size: 1.3rem;
+        width: 450px;
+    }
+
+    .quemsomos .conteudo .image-profile img{
+        width: 500px;
+        height: 100%;
+    }
+}
+
+@media(max-width: 1000px){
+    .quemsomos .conteudo {
+        flex-direction: column;
+    }
+
+    .quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
+        font-size: 5rem;
+    }
+
+    .quemsomos .conteudo .inde .texto, .quemsomos .conteudo .iva .texto{
+        font-size: 2rem;
+        width: 650px;
+    }
+}
+
+@media(max-width: 500px){
+    .quemsomos{
+        height: 100%;
+    }
+    .quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
+        font-size: 3rem;
+        margin-top: 15px;
+    }
+
+    .quemsomos .conteudo .inde .texto, .quemsomos .conteudo .iva .texto{
+        font-size: 1.5rem;
+        width: 85%;
+    }
+}
+
+.servicos{
+    grid-area: servicos;
+    display: flex;
+    flex-direction: column;
+    background-color: #ac8362;
+}
+
+.servicos .itens ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 100px;
+}
+
+.servicos .item .img img{
+    width: 55px;
+    height: 50px;
+}
+
+.servicos .item {
+    margin: 20px 30px;
+    width: 300px;
+    height: 150px;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5rem;
+    border-radius: 5px;
+    border-top: 3px solid #1b1a14;
+    cursor: pointer;
+    position: relative;
+}
+
+.servicos .item::after{
+    content: url("../images/more.png");
+    position: absolute;
+    bottom: -105px;
+    right: 50px;
+    transform: scale(0.15);
+    transition: 0.2s ease-in-out;
+}
+
+.servicos .itens .item.marca, .servicos .itens .item.midia, .servicos .itens .item.redes, .servicos .itens .item.site, .servicos .itens .item.grafico, .servicos .itens .item.google{
+    display: flex;
+    flex-direction: column;
+}
+
+.servicos .item .desc{
+    display: none;
+    font-weight: 400;
+    font-size: 1.3rem;
+    margin-top: 10px;
+    text-align: justify;
+    color: #1b1a14;
+}
+
+.servicos .itens .item .mais{
+    display: none;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 1.3rem;
+    font-family: 'Poppins', sans-serif;
+    padding: 7px;
+    border: 1px solid #1b1a14;
+    color: #1b1a14;
+    border-radius: 18px;
+    width: 100px;
+    transition: ease-in-out 0.3s;
+}
+
+.servicos .item .mais:hover{
+    background-color: #1b1a14;
+    color: #ac8362;
+}
+
+.servicos .itens span{
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: #1b1a14;
+}
+
+ @media(max-width: 650px){
+    .servicos .item{
+        margin-bottom: 35px;
+    }
+
+    .servicos .itens ul{
+        padding: 0px;
+    }
+
+    .servicos .item .desc{
+        font-size: 1.5rem;
+    }
+
+    .servicos .itens span{
+        font-size: 1.8rem;
+    }
+
+    .servicos .item::after{
+        bottom: -105px;
+        right: 50px;
+    }
+ }
+
+
+.projetos {
+    grid-area: projetos;
+    background-color: #f0efea;
+    padding: 50px 0 0;
+ }
+
+.projetos .clientes{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-row-gap: 50px;
+}
+ 
+.projetos .clientes img {
+    width: 65%;
+    transition: 0.2s ease-in-out;
+}
+
+.projetos .clientes img:hover{
+    opacity: 0.6;
+    width: 62%;
+}
+
+.projetos h2{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    text-decoration: none;
+    color: #1b1a14;
+    font-size: 2.7rem;
+    background-color: #ccc;
+    padding: 15px;
+}
+
+@media(max-width: 1000px){
+    .projetos .clientes{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 500px){
+    .projetos .clientes{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+    }
+
+    .projetos h2{
+        font-size: 2rem;
+    }
+}
+ 
+ .depoimentos {
+    grid-area: depoimentos;
+    background-color: #1b1a14;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ .depoimentos .card{
+    padding: 20px;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    box-shadow: 0px 15px 20px -9px rgba(0,0,0,0.75);
+    margin: 20px;
+    max-width: 600px;
+    display: none;
+ }
+
+ .depoimentos .card.mostrar{
+    display: block;
+ }
+
+ .depoimentos .card .profile{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #ac8362;
+ }
+
+.depoimentos .card .profile div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.depoimentos .card .profile img{
+    width: 80px;
+    height: 80px;
+    border: 2px solid #ac8362;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.depoimentos .card .profile .nome{
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+
+.depoimentos .card .feedback {
+    font-family: 'Playfair Display';
+    font-size: 1.8rem;
+    line-height: 25px;
+    margin-top: 20px;
+    text-align: center;
+    color: #f0efea;
+}
+
+.depoimentos .setas{
+    display: flex;
+    margin-bottom: 35px;
+    gap: 10px;
+    transition: ease-in-out;
+}
+
+.depoimentos .setas .setaReturn, .depoimentos .setas .setaNext{
+    cursor: pointer;
+}
+
+.depoimentos .setaReturn{
+    transform: rotateY(180deg);
+}
+
+@media(max-width: 650px){
+
+    .depoimentos .card .feedback{
+        text-align: center;
+        font-size: 1.8rem;
+        line-height: 30px;
+    }
+
+    .depoimentos .card .profile .nome{
+        font-size: 1.8rem;
+    }
+
+    .depoimentos .card .profile .empresa{
+        font-size: 1.5rem;
+    }
+
+    .depoimentos .setas{
+        transform: scale(1.1);
+    }
+}
+
+.contato{
+    grid-area: contato;
+    background-color: #ac8362;
+}
+
+.contato .logo-footer{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.contato .logo-footer img{
+    width: 180px;
+    height: 100%;
+}
+
+.contato .social .social-icon{
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+.contato .social .social-icon li a{
+    margin: 0px 10px;
+}
+
+.contato .social .social-icon li a:hover{
+    filter: invert(1);
+}
+
+.contato .social .social-icon li a img{
+    width: 35px;
+    height: 35px;
+}
+
+
+.image-whats {
+    position: fixed;
+    cursor: pointer;
+    width: 80px;
+    height: 80px;
+    bottom: 15px;
+    right: 30px;
+    padding: 8px;
+    transition: 0.3s ease-in;
+}
+
+.image-whats:hover{
+    transform: scale(1.1);
+}
+
+.contato .inde {
+    font-size: 1.8rem;
+}
+
+@media(max-width: 500px){
+
+    .contato .logo-footer{
+        margin: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .contato .social .social-icon li a img{
+        width: 40px;
+        height: 40px;
+    }
+
+    .image-whats {
+        right: 10px;
+        bottom: 1px;
+        transform: scale(0.9);
+    }
+
+}
+
+.contato .inde{
+    text-align: center;
+}
+
+/* Ativos */
+
+.servicos .item.ativo{
+    height: 100%;
+}
+
+.servicos .item.ativo .desc{
+    display: block;
+}
+
+.servicos .item.ativo .mais{
+    display: block;
+}
+
+
+.servicos .item.ativo::after{
+    transform: rotate(45deg) scale(0.15);
+    filter: opacity(0.8);
+}
