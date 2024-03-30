@@ -552,6 +552,11 @@ body{
 
 /* Ativos */
 
+.opacidade{
+    cursor: default;
+    opacity: 0.4;
+}
+
 .servicos .item.ativo{
     height: 100%;
 }

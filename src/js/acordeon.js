@@ -6,9 +6,9 @@ itemServicos.forEach(function(item){
 
         if(itemAtivoAtual){
         itemAtivoAtual.classList.remove("ativo")
-        }
-
-        item.classList.add("ativo")    
+        }else{
+            item.classList.add("ativo") 
+        }   
         
     })
 })

@@ -17,6 +17,24 @@ function esconderCartaoSelecionado() {
     cartaoSelecionado.classList.remove("mostrar");
 }
 
+function mostrarOuEsconderSetas() {
+    const naoEhOPrimeiroCartao = cartaoAtual !== 0;
+
+    if(naoEhOPrimeiroCartao) {
+        btnVoltar.classList.remove("opacidade");
+    }else{
+        btnVoltar.classList.add("opacidade");
+    }
+
+    const chegouNoUltimoCartao = cartaoAtual !== 0 && cartaoAtual === cartoes.length - 1;
+
+    if(chegouNoUltimoCartao){
+        btnAvancar.classList.add("opacidade")
+    }else{
+        btnAvancar.classList.remove("opacidade")
+    }
+}
+
 btnAvancar.addEventListener("click", () => {
     if(cartaoAtual === cartoes.length - 1) return;
     
@@ -25,6 +43,7 @@ btnAvancar.addEventListener("click", () => {
     cartaoAtual ++;
     
     mostrarCartao(cartaoAtual);
+    mostrarOuEsconderSetas();
 })
 
 btnVoltar.addEventListener("click", () => {
@@ -35,4 +54,5 @@ btnVoltar.addEventListener("click", () => {
     cartaoAtual --;
     
     mostrarCartao(cartaoAtual);
+    mostrarOuEsconderSetas();
 })
