@@ -171,6 +171,9 @@ body{
 }
 
 @media(max-width: 1150px){
+    .quemsomos{
+       height: 500px
+    }
     .quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
         font-size: 3rem;
     }
@@ -187,16 +190,19 @@ body{
 }
 
 @media(max-width: 1000px){
+    .quemsomos {
+        height: 100%;
+    }
     .quemsomos .conteudo {
         flex-direction: column;
     }
 
     .quemsomos .conteudo .inde .quem, .quemsomos .conteudo .iva .quem{
-        font-size: 5rem;
+        font-size: 4rem;
     }
 
     .quemsomos .conteudo .inde .texto, .quemsomos .conteudo .iva .texto{
-        font-size: 2rem;
+        font-size: 1.5rem;
         width: 650px;
     }
 }
