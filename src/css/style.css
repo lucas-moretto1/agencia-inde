@@ -338,19 +338,14 @@ body{
 .projetos .clientes{
     display: grid;
     place-items: center;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: 1fr 1fr;
-    grid-row-gap: 50px;
+    grid-row-gap: 45px;
 }
  
 .projetos .clientes img {
-    width: 65%;
+    width: 64%;
     transition: 0.2s ease-in-out;
-}
-
-.projetos .clientes img:hover{
-    opacity: 0.6;
-    width: 62%;
 }
 
 .projetos h2{
